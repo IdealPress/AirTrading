@@ -36,7 +36,7 @@ class Main extends Component {
         return results.json();
       }).then(data => {
         this.setState({
-          location : data.results[0].location,
+          value : data.results[0].measurements[0].value,
         })
       });
     }, 60000);
@@ -47,7 +47,7 @@ class Main extends Component {
   }
 
   render() {
-    console.log(this.state.location)
+    console.log(this.state.value)
     return (
       <div className="Main">
       </div>
